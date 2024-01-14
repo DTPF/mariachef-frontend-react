@@ -2,18 +2,28 @@
 @import '../../../../../scss/animations';
 
 .login-icon {
-    position: absolute;
-    right: 370px;
-    border: 1px solid black;
-    border-radius: 50%;
-    height: 35px;
-    width: 35px;
-    text-align: center;
-    padding: 2px;
-    margin-top: 3px;
-    @include fadeIn();
+  position: absolute;
+  top: 15px;
+  right: 370px;
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  padding: 2px;
+  margin-top: -3px;
+  @include fadeIn();
 
-    @media (max-width: $media-breakpoint-up-md) {
-        display: none;
-    }
+  @media (max-width: $media-breakpoint-up-md) {
+    display: none;
+  }
+
+  img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+  }
+
+  &__auth {
+    border-radius: 50%;
+    border: 1px solid black;
+  }
 }

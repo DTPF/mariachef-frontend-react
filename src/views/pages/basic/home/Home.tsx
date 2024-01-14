@@ -1,8 +1,8 @@
 import RecipesComponent from 'views/components/basic/recipes'
 import './Home.scss'
+import { memo } from 'react'
 
-export default function Home() {
-
+function Home() {
   return (
     <div className='web-home'>
       <h1>Recetas MSR</h1>
@@ -10,3 +10,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default memo(Home)

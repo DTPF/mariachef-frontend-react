@@ -1,8 +1,8 @@
 import { useReducer, useMemo, useEffect, useCallback, useState } from 'react'
 import RecipesContext from './RecipesContext'
 import initialRecipesState from './initialRecipesState'
-import recipeReducer from 'reducers/recipes/recipes.reducer'
-import * as action from "reducers/recipes/recipes.actions"
+import recipeReducer from 'context/recipes/reducer/recipes.reducer'
+import * as action from "context/recipes/reducer/recipes.actions"
 import { ChildrenProps } from 'interfaces/global'
 import { Recipe } from 'interfaces/recipe'
 
