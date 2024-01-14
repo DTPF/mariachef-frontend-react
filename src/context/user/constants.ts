@@ -1,0 +1,1 @@
+export const lastLoginLS = 'last-login';

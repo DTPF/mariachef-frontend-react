@@ -11,12 +11,14 @@ const initialUserState: UserState = {
 		role: "",
 		isVerified: true,
 		createdAt: "",
-		updatedAt: ""
+		updatedAt: "",
 	},
+	logout: () => { }
 }
 
 export interface UserState {
-	user: User
+	user: User,
+	logout: () => void
 }
 
 export interface User {

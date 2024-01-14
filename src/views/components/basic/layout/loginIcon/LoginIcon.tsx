@@ -1,20 +1,26 @@
 import { UserOutlined } from '@ant-design/icons';
 import './LoginIcon.scss'
 import { useAuth0 } from '@auth0/auth0-react';
-import { memo, useContext } from 'react';
+import { memo, useCallback, useContext, useMemo } from 'react';
 import UserContext from 'context/user/UserContext';
 import { Avatar, Popover } from 'antd';
 
 function LoginIcon() {
-  const { loginWithRedirect, logout } = useAuth0()
-  const { user } = useContext(UserContext)
+  const { loginWithRedirect } = useAuth0()
+  const { user, logout } = useContext(UserContext)
 
-  const content = (
-    <div>
-      <p>Mi cuenta</p>
-      <p onClick={() => logout()} style={{ cursor: 'pointer' }}>Cerrar sesión</p>
-    </div>
-  );
+  const handleLogout = useCallback(() => {
+    logout()
+  }, [])
+
+  const content = useMemo(() => {
+    return (
+      <div>
+        <p>Mi cuenta</p>
+        <p onClick={handleLogout} style={{ cursor: 'pointer' }}>Cerrar sesión</p>
+      </div>
+    );
+  }, [handleLogout])
 
   return (
     <div className='login-icon'>
