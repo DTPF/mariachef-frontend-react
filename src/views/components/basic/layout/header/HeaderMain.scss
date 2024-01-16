@@ -2,22 +2,23 @@
 @import '../../../../../scss/animations';
 
 .header-main {
-    display: flex;
-    justify-content: space-between;
-    color: $color-primary;
-    background-color: $bg-primary;
-    align-items: center;
-    font-size: 1.5rem;
-    min-height: 90px;
-    padding: 0 15px;
-    font-weight: bold;
-    position: fixed;
-    z-index: 99999;
-    width: 100%;
-    margin-bottom: 90px;
-    @include fadeIn();
+  display: flex;
+  justify-content: space-between;
+  color: $color-primary;
+  background-color: $bg-primary;
+  align-items: center;
+  font-size: 1.5rem;
+  min-height: 80px;
+  padding: 0 15px;
+  font-weight: bold;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  margin-bottom: 90px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+  @include fadeIn();
 
-    &__logo {     
-      max-width: 150px;
-    }
+  &__logo {
+    max-width: 150px;
   }
+}

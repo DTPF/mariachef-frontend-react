@@ -1,0 +1,49 @@
+@import '../../../../../scss/variables';
+
+.menu-bottom-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-primary;
+  background-color: $bg-primary;
+  font-size: 1.5rem;
+  min-height: 70px;
+  font-weight: bold;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+  user-select: none;
+
+  @media (max-width: $mobile-width) {
+    font-size: 1.3rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 10px 0;
+    color: $color-primary;
+    user-select: none;
+
+    &.active {
+      color: #434343;
+      color: #fff;
+
+      .menu-bottom-mobile__item--icon {
+        background-color: $color-primary;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+        transition: all .3s ease-in-out;
+      }
+    }
+
+    &--icon {
+      font-size: 11.8rem;
+      border-radius: 17px;
+      padding: 9px;
+      width: 50px !important;
+      height: 50px !important;
+      user-select: none;
+    }
+  }
+}

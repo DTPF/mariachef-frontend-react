@@ -3,8 +3,8 @@
 
 .login-icon {
   position: absolute;
-  top: 15px;
-  right: 370px;
+  top: 17px;
+  right: 37px;
   height: 35px;
   width: 35px;
   text-align: center;
@@ -12,14 +12,10 @@
   margin-top: -3px;
   @include fadeIn();
 
-  @media (max-width: $media-breakpoint-up-md) {
-    display: none;
-  }
-
   img {
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 48px;
+    height: 48px;
   }
 
   &__auth {

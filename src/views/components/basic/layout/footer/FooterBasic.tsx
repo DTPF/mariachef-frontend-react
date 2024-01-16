@@ -1,9 +1,12 @@
+import { memo } from 'react'
 import './FooterBasic.scss'
 
-export default function FooterBasic() {
+function FooterBasic() {
   return (
     <div className='footer-main'>
-      RecetasMSR - 2022
+      MSR - 2024
     </div>
   )
 }
+
+export default memo(FooterBasic)

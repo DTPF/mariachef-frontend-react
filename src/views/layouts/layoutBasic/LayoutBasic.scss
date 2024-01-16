@@ -2,8 +2,9 @@
 
 .layout-basic {
   width: 100%;
+
   &__main {
     padding-top: 125px;
-    min-height: calc(100dvh - 90px);
+    min-height: calc(100dvh - 72px);
   }
 }

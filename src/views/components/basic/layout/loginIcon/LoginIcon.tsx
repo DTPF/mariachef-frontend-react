@@ -4,11 +4,11 @@ import { useAuth0 } from '@auth0/auth0-react';
 import { memo, useCallback, useContext, useMemo } from 'react';
 import UserContext from 'context/user/UserContext';
 import { Avatar, Popover } from 'antd';
+import { adminRole } from 'context/user/constants';
 
 function LoginIcon() {
   const { loginWithRedirect } = useAuth0()
   const { user, logout } = useContext(UserContext)
-
   const handleLogout = useCallback(() => {
     logout()
   }, [])
@@ -17,19 +17,22 @@ function LoginIcon() {
     return (
       <div>
         <p>Mi cuenta</p>
+        {user.role === adminRole && (
+          <p>Admin</p>
+        )}
         <p onClick={handleLogout} style={{ cursor: 'pointer' }}>Cerrar sesión</p>
       </div>
     );
-  }, [handleLogout])
+  }, [handleLogout, user.role])
 
   return (
     <div className='login-icon'>
       {user._id ? (
-        <Popover content={content} title={user.email}>
-          <Avatar size={64} src={user.avatar} />
+        <Popover content={content} title={user.email} placement="bottomRight">
+          <Avatar size={48} src={user.avatar} />
         </Popover>
       ) : (
-        <Avatar size={64} icon={<UserOutlined onClick={() => loginWithRedirect()} />} />
+        <Avatar size={48} icon={<UserOutlined />} onClick={() => loginWithRedirect()} />
       )}
     </div>
   );

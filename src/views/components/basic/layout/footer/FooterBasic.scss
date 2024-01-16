@@ -1,12 +1,17 @@
 @import '../../../../../scss/variables';
 
 .footer-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: $color-primary;
-    background-color: $bg-primary;
-    font-size: 1.5rem;
-    min-height: 90px;
-    font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-primary;
+  background-color: $bg-primary;
+  font-size: 1.5rem;
+  min-height: 70px;
+  font-weight: bold;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+
+  @media (max-width: $mobile-width) {
+    font-size: 1.3rem;
+  }
 }

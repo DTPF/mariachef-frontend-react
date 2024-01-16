@@ -2,37 +2,33 @@
 @import '../../../../../scss/animations';
 
 .menu-top {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    max-width: 800px;
-    position: absolute;
-    left: 180px;
-    margin-top: 10px;
-    @include fadeIn();
+  display: flex;
+  align-items: center;
+  align-content: center;
+  max-width: 800px;
+  position: absolute;
+  left: 180px;
+  margin-top: 10px;
+  @include fadeIn();
 
-    a {
-        color: $color-primary;
-        margin: 0 20px;
-        padding-bottom: 5px;
-        text-decoration: none;
-        font-size: $font-size-md;
+  a {
+    color: $color-primary;
+    margin: 0 20px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    font-size: $font-size-md;
 
-        &:hover {
-            border-bottom: 2px solid black;
-            color: $color-primary-dark;
-        }
-
-        &.active {
-            border-bottom: 2px solid black;
-        }
-        
-        img{
-            max-width: 20px;
-        }
+    &:hover {
+      border-bottom: 2px solid black;
+      color: $color-primary-dark;
     }
 
-    @media (max-width: $media-breakpoint-up-md) {
-        display: none;
+    &.active {
+      border-bottom: 2px solid black;
     }
+
+    img {
+      max-width: 20px;
+    }
+  }
 }

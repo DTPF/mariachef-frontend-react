@@ -1,0 +1,8 @@
+@import '../../../../scss/variables';
+@import '../../../../scss/mixins';
+
+.categories-page {  
+  h1 {
+    @include titleH1();
+  }
+}

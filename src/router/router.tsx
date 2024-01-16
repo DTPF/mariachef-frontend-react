@@ -13,7 +13,7 @@ const SearchBasic = lazy(() => import('views/pages/basic/search'));
 // ADMIN PAGES
 const HomeAdmin = lazy(() => import('views/pages/admin/home'));
 const ContentAdmin = lazy(() => import('views/pages/admin/content'));
-const AccountAdmin = lazy(() => import('views/pages/admin/account'));
+const UsersAdmin = lazy(() => import('views/pages/admin/users'));
 // MESSAGES PAGES
 const Error404 = lazy(() => import('views/pages/errors/Error404'));
 
@@ -56,7 +56,7 @@ const router = createBrowserRouter([
           },
           {
             path: aUsers,
-            element: <Suspense fallback={<></>}><AccountAdmin /></Suspense>,
+            element: <Suspense fallback={<></>}><UsersAdmin /></Suspense>,
           },
           {
             path: "*",
