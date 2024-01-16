@@ -1,3 +1,8 @@
+export const aAdmin = 'admin'
+export const aHome = 'home'
+export const aContent = 'content'
+export const aUsers = 'users'
+
 export const routes = {
   home: '/',
   myRecipes: '/my-recipes',
@@ -5,8 +10,7 @@ export const routes = {
   categories: '/categories',
   search: '/search',
   // Admin
-  admin: '/admin',
-  adminHome: '/admin/home',
-  adminContent: '/admin/content',
-  adminUsers: '/admin/users',
+  adminHome: `/${aAdmin}/${aHome}`,
+  adminContent: `/${aAdmin}/${aContent}`,
+  adminUsers: `/${aAdmin}/${aUsers}`,
 }
