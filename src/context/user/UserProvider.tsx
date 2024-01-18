@@ -24,7 +24,7 @@ function UserProvider(props: ChildrenProps) {
 			const token = await getAccessTokenSilently()
 			if (token && user) {
 				// console.log(token);
-				action.loginAction(dispatch, user, token)
+				action.loginAction({ dispatch, user, token })
 			}
 		})()
 	}, [isAuthenticated, user, isLoading, getAccessTokenSilently, loginWithRedirect])
