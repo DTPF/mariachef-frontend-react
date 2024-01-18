@@ -23,15 +23,16 @@ function UserProvider(props: ChildrenProps) {
 			}
 			const token = await getAccessTokenSilently()
 			if (token && user) {
+				// console.log(token);
 				action.loginAction(dispatch, user, token)
 			}
 		})()
-	}, [isAuthenticated, user, isLoading])
+	}, [isAuthenticated, user, isLoading, getAccessTokenSilently, loginWithRedirect])
 
 	const logout = useCallback(() => {
 		localStorage.removeItem(lastLoginLS)
 		logoutAuth0()
-	}, [])
+	}, [logoutAuth0])
 
 	const memoProvider = useMemo(
 		() => ({
