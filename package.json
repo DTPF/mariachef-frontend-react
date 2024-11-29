@@ -14,7 +14,7 @@
     "antd": "^5.5.1",
     "intersection-observer": "^0.12.2",
     "moment": "^2.29.4",
-    "node-sass": "^7.0.3",
+    "node-sass": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
