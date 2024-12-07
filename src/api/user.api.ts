@@ -1,5 +1,5 @@
-import { basePath, apiVersion } from "./utils/config";
-import { makeRequest } from "./utils/makeRequest";
+import { basePath } from "./utils/config";
+// import { makeRequest } from "./utils/makeRequest";
 
 export const registerLoginUserAPI = async (user: any, token: string): Promise<any> => {
 	const params = {
@@ -12,7 +12,7 @@ export const registerLoginUserAPI = async (user: any, token: string): Promise<an
 			user: user
 		}),
 	}
-	const response = await fetch(`${basePath}/${apiVersion}/login`, params)
+	const response = await fetch(`${basePath}/login`, params)
 	const data = await response.json()
 	return { response, data }
 }
